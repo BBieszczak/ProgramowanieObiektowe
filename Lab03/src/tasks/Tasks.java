@@ -47,7 +47,7 @@ public class Tasks {
     }
 
     public void Task3() {
-        String[] slowa = {"ala", "ma", "kota", "i", "psa"};
+        String[] slowa = {"nazwyam", "sie", "bartosz", "mateusz", "bieszczak"};
         System.out.println("Słowa zamienione na wielkie litery:");
         for (String slowo : slowa) {
             System.out.println(slowo.toUpperCase());
