@@ -1,0 +1,48 @@
+@startuml
+class Engin {
+- int power
+- String fuelType
++ <<Create>> Engin(int,String)
++ void startEngin()
++ void displayInfo()
++ int getPower()
++ String getFuelType()
+}
+
+
+class Vehicle {
+# String brand
+# String model
+# int rokProdukcji
+# double maxSpeed
+~ Engin engin
++ <<Create>> Vehicle(String,String,int,double,Engin)
++ void displayInfo()
+}
+
+
+class Car {
+- int passagerCapacity
++ <<Create>> Car(String,String,int,double,Engin,int)
++ void displayInfo()
+}
+
+
+class Truck {
+- double loadCapaciy
++ <<Create>> Truck(String,String,int,double,Engin,double)
++ void displayInfo()
+}
+
+
+class FuelTank {
+}
+class Main {
++ {static} void main(String[])
+}
+
+
+
+Vehicle <|-- Car
+Vehicle <|-- Truck
+@enduml
